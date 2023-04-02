@@ -5,8 +5,8 @@
     <div class="news-container">
     
         <div class="news-title">
-            <h1>Tin Công Nghệ</h1>
-        </div>
+            <h1 style="color: red;">Tin Tức</h1>
+        </div> 
         <?php 
        $sql_baiviet = mysqli_query($con,"SELECT * FROM tbl_baiviet ORDER BY baiviet_id DESC");
 		while($row_baiviet = mysqli_fetch_array($sql_baiviet)){

@@ -17,7 +17,7 @@
     <header>
         <div class="header">
             <div class="logo">
-              <a href="index.php"><img src="images/logo-coso.png"  width="200px" height="100px"></a>
+              <a href="index.php"><img src="images/logo.png"  width="200px" height="100px"></a>
            </div> 
            <div class="menu">
                 <li><a href="index.php">TRANG CHỦ</a></li>
@@ -34,7 +34,8 @@
                   <?php
                   }
                   ?>
-               
+                  <li><a href="?quanly=list_news">TIN TỨC</a></li>
+                 <li><a href="?quanly=lienhe">LIÊN HỆ</a></li>
             </div>
             <div class="login">
             
@@ -64,7 +65,7 @@
               <button class="fa-solid fa-magnifying-glass" name="search_button" type="submit"></button>
                 <a href="?quanly=cart"class="cart-btn">
                   <i class="fa-solid fa-cart-shopping"></i></a>
-                  <a class="btn-news" href="?quanly=list_news"><i class="fa-solid fa-newspaper"></i>Tin Tức</a>
+                 
               </form>
                 
             </div>        
@@ -74,10 +75,10 @@
     
       <div class="banner">
         <div class="banner-letf">
-          <a href="?quanly=chitietsp&id=28"><img src="images/banner-unpack_galaxys22seriesorders-17022022.png" ></a>
+          <a href="?quanly=chitietsp&id=2"><img src="images/banner.png" ></a>
         </div>
         <div class="banner-right">
-          <a href="?quanly=chitietsp&id=29"><img src="images/banner-iphone.jpg" ></a>
+          <a href="?quanly=chitietsp&id=3"><img src="images/banner2.jpg" ></a>
         </div>
       </div>
       

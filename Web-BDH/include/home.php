@@ -17,8 +17,8 @@
               </div>
               <div class="products-info">
                 <a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>" class="product-name"><?php echo $row_sanpham['sanpham_name'] ?></a>
-                <a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>" class="product-price-sale">Giá khuyến mãi: <?php echo number_format ($row_sanpham['sanpham_giakhuyenmai']) ?><sup>đ</sup></a>
-                <a style="text-decoration-line: line-through" href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>" class="products-price">Giá: <?php echo number_format ($row_sanpham['sanpham_gia']) ?><sup>đ</sup></a>
+                <a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>" class="product-price-sale">Giá khuyến mãi: <?php echo  number_format($row_sanpham['sanpham_giakhuyenmai']) ?><sup>đ</sup></a>
+                <a style="text-decoration-line: line-through" href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>" class="products-price">Giá: <?php echo  number_format($row_sanpham['sanpham_gia']) ?><sup>đ</sup></a>
                 <a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>" class="details">Xem sản phẩm</a>
               </div>
             </div>

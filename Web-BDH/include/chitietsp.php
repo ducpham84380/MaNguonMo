@@ -30,11 +30,21 @@
                 </div>
                 <div class="product-content-right">
                     <div class="product-content-right-product-price">
-                        <a class="product-price-sale">Giá khuyến mãi: <?php echo number_format ($row_chitiet['sanpham_giakhuyenmai']) ?><sup>đ</sup></a>
+                        <a class="product-price-sale">Giá khuyến mãi: <?php echo number_format ($row_chitiet['sanpham_giakhuyenmai']) ?></a>
                     </div>
                     <div class="product-content-right-product-price-sale">
-                        <a style="text-decoration-line: line-through" class="products-price">Giá: <?php echo number_format ($row_chitiet['sanpham_gia']) ?><sup>đ</sup></a>
+                        <a style="text-decoration-line: line-through" class="products-price">Giá: <?php echo number_format ($row_chitiet['sanpham_gia']) ?></a>
                     </div>
+                    <br>
+                    <div class="product-content-right-product-price-sale">
+                        <h3>Quý khách vui lòng liên hệ để được tư vấn chi tiết hơn về dịch vụ</h3>
+                        <br>
+                        <h4>Mr. Hưng: 0937.310.930</h4>
+                        <h4>Mr. Đức: 037.689.4789</h4>
+                        <h4>Mr. Đạt: 0934.187.167</h4>
+                        <h4>Mr. Bảo: 0936.327.176</h4>
+                    </div>
+                    
                     <form action="?quanly=cart", method="POST">
                             <fieldset>
                                 <input type="hidden" name="tensanpham" value="<?php echo $row_chitiet['sanpham_name'] ?>" />
@@ -44,7 +54,7 @@
 								<input type="hidden" name="soluong" value="1" />			
                                 <div class="product-content-right-product-button">
                         
-                        <button name="themgiohang"><i class="fas fa-shopping-cart"></i><p>MUA HÀNG</p></button>
+                        <button name="themgiohang"><i class="fas fa-shopping-cart"></i><p>ĐẶT HÀNG</p></button>
                         </div>
                             </fieldset >
                             

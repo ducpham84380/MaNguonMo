@@ -1,5 +1,5 @@
 <?php
-$con = mysqli_connect("localhost","root","","web-bdh");
+$con = mysqli_connect("localhost","root","hungluu061001","db_bdh");
 
 // Check connection
 if (mysqli_connect_errno())
