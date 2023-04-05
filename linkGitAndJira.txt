@@ -1,0 +1,3 @@
+Jira: https://duc843801.atlassian.net/jira/software/projects/UN/boards/1
+
+Github: https://github.com/ducpham84380/MaNguonMo
