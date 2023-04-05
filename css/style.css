@@ -1,0 +1,760 @@
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    margin: auto;
+    height: 70px;
+    width: 1200px;
+    align-items: center;
+}
+.logo{
+    flex: 1;
+    margin-top: 12px;
+}
+.menu{
+    flex: 3;
+    display: flex;
+}
+.menu > li:hover {
+    background-color: rgb(231, 137, 207);
+    color: black;
+    border-radius: 10px;
+}
+.menu > li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    
+}
+.menu > li{
+    list-style: none;
+    padding: 0 7px;
+    position: relative;
+    
+}
+.menu > li:hover .sub-menu-samsung {
+    visibility: visible;
+    transform: translateY(-20px);
+    background-color: rgb(175, 170, 170);
+}
+.menu > li:hover .sub-menu-iphone {
+    visibility: visible;
+    background-color: rgb(175, 170, 170);
+}
+.menu > li:hover .sub-menu-oppo {
+    visibility: visible;
+    background-color: rgb(175, 170, 170);
+}
+.menu > li:hover .sub-menu-vivo {
+    visibility: visible;
+    background-color: rgb(175, 170, 170);
+}
+.menu > li:hover .sub-menu-xiaomi {
+    visibility: visible;
+    background-color: rgb(175, 170, 170);
+}
+.menu > li:hover .sub-menu-phukien {
+    visibility: visible;
+    background-color: rgb(175, 170, 170);
+}
+
+.sub-menu-samsung {
+    position:absolute ;
+    width: 110px;
+    border: 1px solid rgb(198, 191, 191);
+    border-radius: 10px;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    z-index: 1;
+    list-style: none;
+    transition: 0.3s;
+}
+.sub-menu-samsung > li a {
+    font-weight: normal;
+    color: black;
+}
+.sub-menu-samsung > li:hover {
+    background-color: rgb(208, 202, 202);
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+.sub-menu-iphone {
+    position:absolute ;
+    width: 180px;
+    border: 1px solid rgb(198, 191, 191);
+    border-radius: 10px;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    z-index: 1;
+    list-style: none;
+    transition: 0.3s;
+}
+.sub-menu-iphone > li a {
+    font-weight: normal;
+    color: black;
+}
+.sub-menu-iphone > li:hover {
+    background-color: rgb(195, 188, 188);
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+.sub-menu-oppo {
+    position: absolute;
+    width: 100px;
+    border: 1px solid rgb(198, 191, 191);
+    border-radius: 10px;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    z-index: 1;
+    list-style: none;
+    transition: 0.3s;
+}
+.sub-menu-oppo > li a {
+    font-weight: normal;
+    color: black;
+}
+.sub-menu-oppo > li:hover {
+    background-color: rgb(195, 188, 188);
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+.sub-menu-vivo {
+    position: absolute;
+    width: 60px;
+    border: 1px solid rgb(198, 191, 191);
+    border-radius: 10px;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    z-index: 1;
+    list-style: none;
+    transition: 0.3s;
+}
+.sub-menu-vivo > li a {
+    font-weight: normal;
+    color: black;
+}
+.sub-menu-vivo > li:hover {
+    background-color: rgb(195, 188, 188);
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+.sub-menu-xiaomi {
+    position: absolute;
+    width: 120px;
+    border: 1px solid rgb(198, 191, 191);
+    border-radius: 10px;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    z-index: 1;
+    list-style: none;
+    transition: 0.3s;
+}
+.sub-menu-xiaomi > li a {
+    font-weight: normal;
+    color: black;
+}
+.sub-menu-xiaomi > li:hover {
+    background-color: rgb(195, 188, 188);
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+.sub-menu-phukien {
+    position: absolute;
+    width: 80px;
+    border: 1px solid rgb(198, 191, 191);
+    border-radius: 10px;
+    padding: 10px 0 10px 20px;
+    visibility: hidden;
+    z-index: 1;
+    list-style: none;
+    transition: 0.3s;
+}
+.sub-menu-phukien > li a {
+    font-weight: normal;
+    color: black;
+}
+.sub-menu-phukien > li:hover {
+    background-color: rgb(195, 188, 188);
+    color: black;
+    border-radius: 10px;
+    text-align: center;
+}
+.login {
+    margin-left: 100px;
+}
+.others{
+    max-width: 1200px;
+    margin-left: 500px;
+    position: relative;
+    padding: 10px;
+   
+}
+.btn-news {
+    padding-left: 50px;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+.others > li {
+    display: flex;
+}
+.others button {
+    background-color: white;
+    position: absolute;
+    left: 290px;
+    top: 15px;
+    border: none;
+}
+.search-text {
+    height: 20px;
+    width: 300px;
+    text-align: center;
+    border-radius: 40px;
+    
+}
+.cart-btn {
+    position: relative;
+    width: 80px;
+    left: 30px;
+    top: 5px;
+    color: #000;
+}
+.banner {
+    
+    margin: auto;
+    display: flex;
+    height: 300px;
+    width: 1200px;
+    padding-bottom: 10px;
+}
+
+.banner-letf {
+    display: block;
+    position: relative;
+    height: 300px;
+    width: 850px;
+    transition: 0.5s;
+  }
+  .banner-letf:hover {
+    transform: translateY(-20px);
+  }
+  
+  .banner-letf img {
+
+    display: block;
+    position: absolute;
+    width: 850px;
+    height: 100%;
+    padding: 10px;
+    
+  }
+.banner-right {
+    display: block;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    padding-right: 10px;
+    transition: 0.5s;
+}
+.banner-right:hover {
+    transform: translateY(-20px);
+}
+    .banner-right img{
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        padding: 10px;
+    
+}
+/*------------danhmucsp---------*/
+*{
+    padding: 0;
+    margin: 0;
+}
+#wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.headline > h2 {
+    padding-bottom: 20px;
+    padding-top: 40px;
+    text-align: center;
+    color: red;
+    
+}
+ul.products {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    
+    
+    
+}
+.products-item {
+    transition: 0.5s;
+}
+.products-item:hover {
+    background-color: antiquewhite;
+    transform: translateY(-20px);
+}
+ul.products li {
+    flex-basis: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+    border: 1px solid gainsboro;
+ 
+    
+}
+ul.products li img {
+    max-width: 100%;
+    height: 200px;
+}
+ul.products li .products-info {
+    padding: 20px 0;
+}
+ul.products li .products-info a {
+    display: block;
+    text-decoration: none;
+}
+.product-name {
+    font-weight: bold;
+    font-size: 20px;
+    color: #000;
+}
+.products-price {
+    font-size: 18px;
+    color: rgb(147, 147, 148);
+    padding-bottom: 20px;
+}
+.product-price-sale {
+    font-weight: bold;
+    font-size: 18px;
+    color: red;
+}
+.details {
+    border-radius: 10px;
+    width: 125px;
+    font-weight: bold;
+    font-size: 18px;
+    color: black;
+    justify-content: space-evenly;
+    cursor: pointer;
+}
+.details:hover {
+    color: white;
+    background-color: blue;
+}
+/*------------footer---------*/
+.footer {
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    border-top: 2px black solid;
+    height: 120px;
+    background-color: aliceblue;
+    padding: 2px 10px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+.right-footer {
+    flex: 2;
+    float: left;
+    width: 40%;
+}
+.letf-footer {
+    flex: 1;
+    width: 60%;
+}
+.letf-footer p {
+    margin-left: 30px;
+    margin-bottom: 90px;
+}
+.letf-footer img {
+    width: 250px;
+    height: 70px;
+}
+ 
+ /*----------product---------- */
+ .product {
+    padding: 100px 0;
+ }
+ .product-content-letf {
+    width: 50%;
+ }
+ 
+ .product-content-letf-big-img {
+    width: 80%;
+    padding-right:  20px;
+ }
+ .product-content-letf-big-img img {
+    width: 80%;
+    cursor: pointer;
+ }
+ .product-content-letf-small-img {
+    width: 20%;
+ }
+ .product-content-letf-small-img img {
+    width: 80%;
+    cursor: pointer;
+ }
+ .row {
+    margin: 0 auto;
+    display: flex;
+    max-width: 1200px;
+ }
+ .product-content-right {
+    width: 50%;
+    padding-left: 20px;
+ }
+ .product-content-letf-product-name {
+    width: 1200px;
+    margin: auto;
+    padding-bottom: 20px;
+ }
+.product-content-letf-product-name h1 {
+    font-size: 26px;
+   text-align: left;
+}
+fieldset {
+    border:0 none;
+ }
+.product-content-right-product-button button {
+    width: 130px;
+    height: 40px;
+    display: block;
+    margin: 20px 0 12px;
+    border:  none;
+}
+.product-content-right-product-button button:first-child {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #ffff;
+    border: 2px solid black;
+    cursor: pointer;
+    border-radius: 20px;
+    
+}
+.product-content-right-product-button button:first-child:hover {
+    background-color: aquamarine;
+    color: black;
+}
+.product-motasp {
+    width: 1000px;
+    padding-top: 40px;
+    margin: 0 auto;
+    
+}
+.product-motasp > h2{
+    text-align: center;
+    padding-bottom: 20px;
+    
+}
+
+/* ----------------cart--------------- */
+.cart {
+    padding: 30px 0;
+
+}
+.name-customer {
+    max-width: 1200px;
+    margin: auto;
+    padding-bottom: 20px;
+}
+.cart-content-letf {
+    flex: 2;
+    padding-right: 12px;
+}
+.cart-content-letf table {
+    width: 100%;
+    text-align: center;
+}
+.cart-content-letf table th {
+    padding-bottom: 30px;
+    font-size: 14px;
+    color: #333;
+    text-transform: uppercase ;
+    border-collapse: collapse;
+    border: bottom 2px solid #dddddd ;
+}
+.cart-content-letf table p {
+    font-size: 14px;
+    color: #333;
+}
+.cart-content-letf table input{
+    width: 80px;
+   
+}
+.cart-content-letf table span {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #dddddd;
+    cursor: pointer;
+    background-color: red;
+    border-radius: 30px;
+    text-decoration: none;
+}
+.cart-content-letf table td {
+    padding: 20px 0;
+    border-bottom: 2px solid #dddddd;
+}
+.cart-content-letf table td:first-child img {
+    width: 130px;
+}
+.cart-content-letf td:first-child(2) {
+    max-width: 130px;
+}
+.cart-content-letf td:first-child(3) {
+    width: 30px;
+}
+.btn-update {
+    background-color: white;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.btn-pay-login {
+    background-color:chocolate;
+    width: 80px;
+    height: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.cart-content-right {
+    flex: 1;
+    padding-left: 12px;
+    border-left: 2px solid #dddddd;
+    text-align: center;
+}
+.title-customer {
+    padding-bottom: 10px;
+}
+.form-input-customer {
+    text-align: center;
+}
+.form-input-customer  input{
+    margin-bottom: 20px;
+    width: 350px;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+
+}
+.controls-form-group {
+    text-align: center;
+    padding-bottom: 10px;
+}
+.controls-form-group select {
+    width: 350px;
+    height: 40px;
+    text-align: center;
+    border-radius: 10px;
+} 
+.title-cart {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding-bottom: 30px;
+}
+.title-cart > h2 {
+    color: red;
+    font-weight: bold;
+}
+.cart-content-right-button button {
+    background-color: white;
+    height: 30px;
+    width: 150px;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+.cart-content-right-button button:hover {
+    background-color: red;
+    font-weight: bold;
+}
+  /* ------------login khachhang----------- */
+ 
+.noi-dung {
+    width: 1200px;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+section .noi-dung{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 100%;
+}
+section .noi-dung .form{
+    width: 50%;
+}
+section .noi-dung .form h2{
+    color: #607d8b;
+    font-weight: 500;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #ff4584;
+    display: inline-block;
+    letter-spacing: 1px;
+}
+section .noi-dung .form .input-form{
+    margin-bottom: 20px;
+}
+section .noi-dung .form .input-form span{
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: inline-block;
+    color: #607db8;
+    letter-spacing: 1px;
+     }
+section .noi-dung .form .input-form input{
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    border: 1px solid #607d8b;
+    font-size: 16px;
+    letter-spacing: 1px;
+    color: #607d8b;
+    background: transparent;
+    border-radius: 30px;
+    }
+section .noi-dung .form .input-form input[type="submit"]{
+    background: #ff4584;
+    color: #fff;
+    outline: none;
+    border: none;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 1px 1px rgba(0,0,0,0.12),
+               0 2px 2px rgba(0,0,0,0.12),
+               0 4px 4px rgba(0,0,0,0.12),
+              0 8px 8px rgba(0,0,0,0.12),
+              0 16px 16px rgba(0,0,0,0.12);
+}
+section .noi-dung .form .input-form input[type="submit"]:hover{
+    background: #f53677;
+}
+section .noi-dung .form .input-form p{
+    color: #607d8b;
+}
+section .noi-dung .form .input-form p a{
+    color: #ff4584;
+}
+section .noi-dung .form h3{
+    color: #607d8b;
+    text-align: center;
+    margin: 80px 0 10px;
+    font-weight: 500;
+}
+section .noi-dung .form .icon-dang-nhap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .noi-dung .form .icon-dang-nhap li{
+    list-style: none;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section .noi-dung .form .icon-dang-nhap li:nth-child(1){
+    color: #3b5999;
+}
+section .noi-dung .form .icon-dang-nhap li:nth-child(2){
+    color: #dd4b39;
+}
+section .noi-dung .form .icon-dang-nhap li:nth-child(3){
+    color: #55acee;
+}
+section .noi-dung .form .icon-dang-nhap li i{
+    font-size: 24px;
+}
+@media (max-width: 768px){
+    section .img-bg{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+    }
+    section .noi-dung{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+    }
+    section .noi-dung .form{
+        width: 100%;
+        padding: 40px;
+        background: rgba(255 255 255 / 0.9);
+        margin: 50px;
+    }
+    section .noi-dung .form h3{
+        color: #607d8b;
+        text-align: center;
+        margin: 30px 0 10px;
+        font-weight: 500;
+    }
+}
+/* --------------tintuc--------------- */
+.news-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.news-title {
+    padding-top: 20px;
+    text-align: center;
+    padding-bottom: 20px;
+}
+.news-content-letf {
+    width: 30%;
+}
+.news-content-letf img {
+    width: 60%;
+    height: 150px;
+    padding-left: 50px;
+    transition: 0.5s;
+}
+.news-content-letf img:hover {
+    transform: translateY(-20px);
+}
+.new-content-right {
+    width: 60%;
+}
+.new-content-right > a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    font-size: 20px;
+}
+/* ------------detail-news----------- */
+.detail-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.detail-content {
+    text-align: left;
+   
+}
+.detail-title {
+    padding: 30px;
+    text-align: center;
+    font-size: 24px;
+}
