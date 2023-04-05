@@ -24,12 +24,25 @@
 
 
 
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<h1>Đăng Nhập</h1>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- end breadcrumb section -->
+    <br>
+    <div class="container">
 
-
-<section>
      <div class="noi-dung">
          <div class="form">
-             <h2>Đăng nhập Tài Khoản</h2>
+             
              <form action="" method="POST">
                  <div class="input-form">
                      <span>Tài khoản</span>
@@ -48,7 +61,44 @@
              </form>
          </div>
      </div>
+     </div>
      <!--Kết Thúc Phần Nội Dung-->
- </section>
+
+ <style>
+      /* Thêm các kiểu CSS để định dạng form */
+      form {
+        width: 400px;
+        margin: 0 auto;
+        padding: 20px;
+        border: 1px solid #ccc;
+        background-color: #f4f4f4;
+        border-radius: 5px;
+      }
+      label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+      input[type="text"],
+      input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+    </style>
+     <br>
 </body>
 </html>

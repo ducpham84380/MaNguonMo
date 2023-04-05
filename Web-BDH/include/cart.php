@@ -81,66 +81,77 @@ elseif(isset($_POST['thanhtoandangnhap'])){
         }
 }
 ?>
-<!-- -----------cart page -->
 
-<section class="cart"></section>
-      <div class="container">
-        <div class="title-cart">
-            <h2>GIỎ HÀNG CỦA BẠN</h2>
-            </div>
-            <div class="name-customer">
-            <?php 
-				if(isset($_SESSION['dangnhap_home'])){
-					echo '<p style="color:#000;">Xin chào bạn: '.$_SESSION['dangnhap_home'].'<a href="index.php?quanly=cart&dangxuat=1">  Đăng xuất</a></p>';
-				}else{
-					echo '';
-				}
-				?>
-            </div>
-            
-            
-        <div class="cart-content row">
-        <?php
-			$sql_lay_giohang = mysqli_query($con,"SELECT * FROM tbl_giohang ORDER BY giohang_id DESC");
-
-			?>
-            <div class="cart-content-letf">
-            <form action="" method="POST">
-                <table>
-                    <tr>
-                        <th>Sản phẩm</th>
-                        <th>Tên sản phẩm</th>
-                        <th>Số lượng</th>
-                        <th>Giá</th>
-                        <th>Thành tiền</th>
-                        <th>Xóa</th>
-                        
-                    </tr>
-                    <?php
-						$i = 0;
-						$total = 0;
-						while($row_fetch_giohang = mysqli_fetch_array($sql_lay_giohang)){ 
-
-							$subtotal = $row_fetch_giohang['soluong'] * $row_fetch_giohang['giasanpham'];
-							$total+=$subtotal;
-							$i++;
-						?>
-                    <tr>
-                    <input type="hidden" name="product_id[]" value="<?php echo $row_fetch_giohang['sanpham_id'] ?>">
-                        <td><a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>"><img src="uploads/<?php echo $row_fetch_giohang['hinhanh'] ?>" alt="" height="120"></a></td>
-                        <td><p><?php echo $row_fetch_giohang['tensanpham'] ?></p></td>
-                        <td><input type="number" value="<?php echo $row_fetch_giohang['soluong'] ?>" min="1" name="soluong[]"></td>
-                        <td><p><?php echo number_format($row_fetch_giohang['giasanpham']) ?> <sup>đ</sup></p></td>
-                        <td><p><?php echo number_format($subtotal) ?> <sup>đ</sup></p></td>
-                        <td><a href="?quanly=cart&xoa=<?php echo $row_fetch_giohang['giohang_id'] ?>">Xóa</a></td>
-                    </tr>
-                    
-                    <?php
-                        }
-                    ?>
-                    <tr>
-                        <td colspan="7"><input type="submit" class="btn-update" value="Cập nhật" name="capnhatsoluong">
+<!-- breadcrumb-section -->
+<div class="breadcrumb-section breadcrumb-bg">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-8 offset-lg-2 text-center">
+					<div class="breadcrumb-text">
+						<h1>Giỏ Hàng</h1>
+                        <br>
                         <?php 
+                            if(isset($_SESSION['dangnhap_home'])){
+                                echo '<p style="color: while;">Xin chào bạn: '.$_SESSION['dangnhap_home'].'<a href="index.php?quanly=cart&dangxuat=1">  Đăng xuất</a></p>';
+                            }else{
+                                echo '';
+                            }
+                        ?>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- end breadcrumb section -->
+<!-- cart -->
+<div class="cart-section mt-150 mb-150">
+<?php
+		$sql_lay_giohang = mysqli_query($con,"SELECT * FROM tbl_giohang ORDER BY giohang_id DESC");
+
+	?>
+		<div class="container">
+			<div class="row">
+            
+				<div class="col-lg-8 col-md-12">
+                <form action="" method="POST">
+					<div class="cart-table-wrap">
+						<table class="cart-table">
+							<thead class="cart-table-head">
+								<tr class="table-head-row">
+									<th class="product-remove"></th>
+									<th class="product-image">Hình ảnh</th>
+									<th class="product-name">Tên</th>
+									<th class="product-price">Giá</th>
+									<th class="product-quantity">Số lượng</th>
+									<th class="product-total">Thành tiền</th>
+								</tr>
+							</thead>
+                           
+							<tbody>
+                            <?php
+                                $i = 0;
+                                $total = 0;
+                                while($row_fetch_giohang = mysqli_fetch_array($sql_lay_giohang)){ 
+
+                                    $subtotal = $row_fetch_giohang['soluong'] * $row_fetch_giohang['giasanpham'];
+                                    $total+=$subtotal;
+                                    $i++;
+                            ?>
+								<tr class="table-body-row">
+                                <input type="hidden" name="product_id[]" value="<?php echo $row_fetch_giohang['sanpham_id'] ?>">
+									<td class="product-remove"><a  href="?quanly=cart&xoa=<?php echo $row_fetch_giohang['giohang_id'] ?>"><i class="far fa-window-close"></i></a></td>
+									<td class="product-image"><img src="uploads/<?php echo $row_fetch_giohang['hinhanh'] ?>" alt=""></td>
+									<td class="product-name"><?php echo $row_fetch_giohang['tensanpham'] ?></td>
+									<td class="product-price"><?php echo number_format($row_fetch_giohang['giasanpham']) ?><sup>đ</sup></td>
+									<td class="product-quantity"><input type="number" value="<?php echo $row_fetch_giohang['soluong'] ?>" min="1" name="soluong[]"></td>
+									<td class="product-total"><?php echo number_format($subtotal) ?> <sup>đ</sup></td>
+								</tr>
+                                <?php
+                                }
+                                ?>
+                                <tr>
+                                <td colspan="7"><input type="submit" class="btn-update" value="Cập nhật" name="capnhatsoluong">
+                                <?php 
 								$sql_giohang_select = mysqli_query($con,"SELECT * FROM tbl_giohang");
 								$count_giohang_select = mysqli_num_rows($sql_giohang_select);
 
@@ -161,59 +172,77 @@ elseif(isset($_POST['thanhtoandangnhap'])){
 								
                         </td>
                     </tr>
-                </table>
-                </form>
-            </div>
-            <?php
-			if(!isset($_SESSION['dangnhap_home'])){ 
-			?>
-            <div class="cart-content-right">
-                <form action="" method="post">
-                    <div class="title-customer">
-                        <h2>Thông tin giao hàng</h2>
-                     </div>
-                     <div class="form-input-customer">
-                        <input type="text" name="name" placeholder="Họ và tên" required="">
-                            <br>
-                        <input type="text" name="phone" placeholder="Số điện thoại" required="">
-                            <br>
-                        <input type="text" name="address" placeholder="Địa chỉ" required="">
-                            <br>
-                        <input type="text" name="email" placeholder="Email" required="">
-                            <br>
-                            <input type="password" name="password" placeholder="Password" required="">
-                            <br>
-                        <input type="text" name="note" placeholder="Ghi chú" required="">
-                    </div>
-                    <div class="controls-form-group">
-                        <select class="option-w3ls" name="giaohang">
-                            <option>Chọn hình thức thanh toán</option>
-                            <option value="1">Thanh toán online</option>
-                            <option value="0">Thanh toán khi nhận hàng</option>
-                        </select>
-                    </div>
-                    <div class="pay-button">
-                        <input type="hidden" name="thanhtoan_product_id[]" value="<?php echo $row_thanhtoan['sanpham_id'] ?>">
-                        <input type="hidden" name="thanhtoan_soluong[]" value="<?php echo $row_thanhtoan['soluong'] ?>">
-                     </div>
-                
-                <div class="cart-content-right-button">
+							</tbody>
+                            <tr>
+                        
+						</table>
+					</div>
+                    </form>
+				</div>
                 <?php
-                    $sql_lay_giohang = mysqli_query($con,"SELECT * FROM tbl_giohang ORDER BY giohang_id DESC");
-                    while($row_thanhtoan = mysqli_fetch_array($sql_lay_giohang)){ 
-                ?>
-                    <input type="hidden" name="thanhtoan_product_id[]" value="<?php echo $row_thanhtoan['sanpham_id'] ?>">
-			        <input type="hidden" name="thanhtoan_soluong[]" value="<?php echo $row_thanhtoan['soluong'] ?>">
+                if(!isset($_SESSION['dangnhap_home'])){ 
+                ?>                   
+				<div class="col-lg-4">
+                    <form action="" method="post">
+                        <div class="total-section">
+                            <table class="total-table">
+                                <h4 style="text-align: center;">Thông tin giao hàng</h4>
+                                <div >
+                                    <input style="border-radius: 10px; width: 300px;" type="text" name="name" placeholder=" Họ và tên" required="">
+                                        <br>
+                                        <br>
+                                    <input style="border-radius: 10px; width: 300px;" type="text" name="phone" placeholder="Số điện thoại" required="">
+                                        <br>
+                                        <br>
+                                    <input style="border-radius: 10px; width: 300px;" type="text" name="address" placeholder="Địa chỉ" required="">
+                                        <br>
+                                        <br>
+                                    <input style="border-radius: 10px; width: 300px;" type="text" name="email" placeholder="Email" required="">
+                                        <br>
+                                        <br>
+                                        <input style="border-radius: 10px; width: 300px;" type="password" name="password" placeholder="Password" required="">
+                                        <br>
+                                        <br>
+                                    <input style="border-radius: 10px; width: 300px;" type="text" name="note" placeholder="Ghi chú" required="">
+                                </div>
+                            </table>
+                             <br>
+            
+                            <div class="controls-form-group">
+                                <select class="option-w3ls" name="giaohang">
+                                    <option>Chọn hình thức thanh toán</option>
+                                    <option value="1">Thanh toán online</option>
+                                    <option value="0">Thanh toán khi nhận hàng</option>
+                                </select>
+                            </div>
+                            <div class="pay-button">
+                                <input type="hidden" name="thanhtoan_product_id[]" value="<?php echo $row_thanhtoan['sanpham_id'] ?>">
+                                <input type="hidden" name="thanhtoan_soluong[]" value="<?php echo $row_thanhtoan['soluong'] ?>">
+                            </div>
+                            <br>
+                            <div class="cart-content-right-button">
+                                <?php
+                                    $sql_lay_giohang = mysqli_query($con,"SELECT * FROM tbl_giohang ORDER BY giohang_id DESC");
+                                    while($row_thanhtoan = mysqli_fetch_array($sql_lay_giohang)){ 
+                                ?>
+                                    <input type="hidden" name="thanhtoan_product_id[]" value="<?php echo $row_thanhtoan['sanpham_id'] ?>">
+                                    <input type="hidden" name="thanhtoan_soluong[]" value="<?php echo $row_thanhtoan['soluong'] ?>">
+                                <?php
+                                    } 
+                                ?>
+                                    <a href="index.php" class="boxed-btn">Tiếp tục mua hàng</a>
+                                    <button style="border-radius: 20px;"  name="thanhtoan">Thanh toán</button>
+                            </div>
+                        </div>
+                    </form> 
+
+					
+				</div>
                 <?php
                     } 
-                ?>
-                    <a href="index.php"><button>Tiếp tục mua hàng</button></a>
-                    <button name="thanhtoan">Thanh toán</button>
-                </div>
-                </form>               
-            </div>
-            <?php
-			} 
-			?>
-        </div>
-      </div>
+                    ?>
+			</div>
+		</div>
+        
+	</div>
+	<!-- end cart -->
